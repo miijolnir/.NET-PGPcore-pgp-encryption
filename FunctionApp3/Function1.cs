@@ -22,7 +22,7 @@ namespace MyPgpFunctions
             //bool asciiArmor = true;
 
             // Retrieve the public key from Azure Key Vault
-            string keyVaultUri = "key-vault-uri";
+            string keyVaultUri = "key-vault-uri"; // Replace with your key-vault-uri
             string publicKeySecretName = "secret-name"; // Replace with your secret name
             var keyVaultClient = new SecretClient(new Uri(keyVaultUri), new DefaultAzureCredential());
             KeyVaultSecret publicKeySecret = keyVaultClient.GetSecret(publicKeySecretName);
