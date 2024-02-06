@@ -13,8 +13,8 @@ namespace MyPgpFunctions
     {
         [FunctionName("FunctionPgp")]
         public static void Run(
-            [BlobTrigger("input/{name}", Connection = "AzureWebJobsStorage")] Stream myBlob,
-            [Blob("output/{name}.pgp", FileAccess.Write, Connection = "AzureWebJobsStorage")] Stream outBlob,
+            [BlobTrigger("input/{name}", Connection = "AzureWebJobsStorage")] Stream myBlob, // replace input with you actual container name 
+            [Blob("output/{name}.pgp", FileAccess.Write, Connection = "AzureWebJobsStorage")] Stream outBlob,    // replace output with you actual container name 
             string name,
             ILogger log)
         {
